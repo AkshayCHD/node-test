@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/health-check', (req, res) => {
     console.log("Health checked at", (new Date()).toISOString());
-    res.send({ message: "Health checked", time: (new Date()).toISOString() })
+    res.send({ message: "Health checked, for image updated by github", time: (new Date()).toISOString() })
 })
 
 app.listen(5000, () => {
