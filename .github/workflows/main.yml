@@ -44,6 +44,7 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
   redeploy:
     runs-on: ubuntu-latest
+    needs: [docker]
     steps:
       - 
         name: Invoke deployment hook
